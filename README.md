@@ -10,7 +10,7 @@ This README provides the documentation for the Terraform configuration that sets
 
 ## Provider Configuration
 
-The AWS provider is used with a version constraint of `>=5`. The configuration specifies that the AWS credentials are sourced from the file located at `~/.aws/credentials`, and the AWS region is set to `us-east-1`.
+The AWS provider is used with a version constraint of `>=5`. The configuration specifies that the AWS credentials are sourced from the profile specied under `profile2`, and the AWS region is set to `us-east-1`.
 
 ```hcl
 terraform {
@@ -30,7 +30,7 @@ provider "aws" {
 
 ## AWS S3 Bucket Configuration
 
-The S3 bucket, `sadey2k-tf-state-location`, is tagged with the name `sadey2k-tf-state-location` and the environment `Dev`.
+The S3 bucket, `sadey2k2-tf-state-location`, is tagged with the name `sadey2k2-tf-state-location` and the environment `Dev`.
 
 ```hcl
 resource "aws_s3_bucket" "tf_state_location" {
