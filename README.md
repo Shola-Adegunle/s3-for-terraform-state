@@ -23,8 +23,8 @@ terraform {
 }
 
 provider "aws" {
-  shared_credentials_files = ["~/.aws/credentials"]
-  region                   = "us-east-1"
+  profile = "profile2"
+  region  = "us-east-1"
 }
 ```
 
@@ -34,10 +34,10 @@ The S3 bucket, `sadey2k-tf-state-location`, is tagged with the name `sadey2k-tf-
 
 ```hcl
 resource "aws_s3_bucket" "tf_state_location" {
-  bucket = "sadey2k-tf-state-location"
+  bucket = "sadey2k2-tf-state-location"
 
   tags = {
-    Name        = "sadey2k-tf-state-location"
+    Name        = "sadey2k2-tf-state-location"
     Environment = "Dev"
   }
 }
